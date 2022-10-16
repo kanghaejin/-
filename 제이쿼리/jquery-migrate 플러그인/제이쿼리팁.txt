@@ -1,0 +1,19 @@
+[제이쿼리] 제이쿼리 최신버전에서 삭제된 이전 버전의 메서드 사용법  JSP   
+
+제이쿼리는 버전이 자주 업글되기 때문에 이전 버전에 만들어뒀던 기능들이 안 먹힐 경우가 많습니다.
+이런 경우 'Migrate plugin'를 이용해서 해결 할수 있습니다.
+
+1. http://jquery.com/download/에서
+Download the compressed, production JQuery Migrate 1.2.1(알맞은 버전선택)]을 글릭한 후, js 폴더에 다운로드받습니다.
+
+2. 다음과 같이 html의 <head> 영역안에 제이쿼리 최신 버전의 라이브러리 파일을 연동한 태그 다음 부분에 다운로드 받은 Jquery Migrate 3.1.1 파일을 연동합니다.
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<!--  최신버전의 제이쿼리의 링크를 연결합니다.     -->
+
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+<!--  해당되는 제이쿼리 migrate 버전의 링크를 연결합니다.  
+jQuery 1.9 버젼이하를 사용하는 사람들을 위해 1.9 ~ 3.0 을 지원하기 위한 버젼
+    ====> jQuery Migrate 1.x 사용함.
+
+jQuery Migrate 1.x 를 사용했거나 jQuery 1.9 이상 버젼을 사용 중이라면  jQuery 3.0 이상을 지원하기 위한 버젼 ==>  jQuery Migrate 3.x 사용함.

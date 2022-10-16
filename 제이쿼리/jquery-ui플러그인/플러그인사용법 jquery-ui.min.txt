@@ -1,0 +1,59 @@
+[드래그 효과를 쓸 수 있음 draggable]
+   //드래그 실행
+          draggable()  
+
+  // 드래그 종료후 복귀
+    draggable({ stop : function(){ 
+            $(this).animate({ top:'-25em', left : 0 }, 1000, 'easeOutElastic' ); }
+             })
+
+[effect] Transfer 제외한 효과들은 show/hide 에 가능
+blind/bounce/blip/drop/explode/fade/fold/
+highlight/puff/pulsate/scale/shake/size/slide/transfer
+
+$('.sec_box1').effect('shake',"",500);
+
+   //이벤트로 수행 후 원상복귀 
+      $('.sec_box1').effect('shake',"",500,callback);
+
+
+[모션효과 easing]
+jswing/def/easeInQuad/easeOutQuad/easeInOutQuad/easeInCubic/easeOutCubic/
+easeInOutCubic/easeOutCubic/easeInOutCubic/easeInQuart/easeOutQuart/easeInOutQuart/
+easeInQuint/easeOutQuint/easeInOutQuint/easeInSine/easeOutSine/easeInOutSine/
+easeInExpo 점점빠르게/easeOutExpo 점점느리게/easeInOutExpo 점점빠르면서도느리게.../
+easeInCirc/easeOutCirc/easeInOutCirc/easeInElastic/easeOutElastic : 뒤에서 날카롭게 통통/
+easeInOutElastic/easeInBack: 뒤로 살짝 갔다가 앞으로 감/
+easeOutBack: 끝에서 밀렸다가 앞으로/easeInOutBack/easeInBounce: 통통 튕기면서/
+easeOutBounce:뒤에서 통통/easeInOutBounce
+
+ animate({height:'15em''},500,'easeOutElastic');
+
+
+[widget]
+Accordion
+Autocomplete
+Button
+Checkboxradio
+Controlgroup
+Datepicker
+Dialog
+Menu
+Progressbar
+Selectmenu
+Slider
+Spinner
+Tabs
+Tooltip
+
+[Effects]
+Add Class
+Animate :   css 명령어 적용가능  animate({'background-color':'red','opacity':1})
+Easing
+Effect
+Hide
+Remove Class
+Show
+Switch Class
+Toggle
+Toggle Class

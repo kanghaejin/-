@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+     #main_image{
+        /* overflow: hidden;*/position: relative; 
+        margin:auto;width:360px;border:5px solid red
+         }
+     #slide .container{position: relative; width:3000px; left:0px;} 
+     #slide .container > div{width:360px;  float:left;} 
+     #slide img{width:100%;}
+  </style>
+  <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+  <script>
+      $(function(){
+          var slide;
+          slide = setInterval(function(){
+              $('#slide .container > div:first-child').animate({
+                'margin-left':'-360px'},600,function(){
+                    $('#slide .container').append($('#slide .container > div:nth-child(1)'));
+                    $('#slide .container > div:nth-child(3)').css(
+                                        {'margin-left':0})
+                });
+              },2000)
+          });
+      
+  </script>
+ </head>
+ <body>
+    <div id="main_image"> 
+        <div id="slide"> 
+            <div class="container"> 
+                <div class="slide_photo1"><img src="image/slide01.jpg"></div> 
+                <div class="slide_photo2"><img src="image/slide02.jpg"></div> 
+                <div class="slide_photo3"><img src="image/slide03.jpg"></div> 
+            </div> 
+        </div>
+         <span>"환영합니다! 부산IT 훈련생 여러분”</span> 
+    </div>
+ </body>
+</html>
